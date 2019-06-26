@@ -98,14 +98,41 @@
     font-size: 60px;
 }
 
-.ex-10-icon:hover {
-  
+.ex-10-icon {
+  animation: spin 3s linear infinite;
 }
+@keyframes spin {
+ 100% {
+     transform: rotate(1turn);
+ }
+}
+
+
 
 
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+  animation: spin 2s  infinite;
+}
+@keyframes spin {
+  0% {
+        transform:rotate(0deg);
+    }
+  75% {
+        transform:rotate(270deg);
+    }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
+}
+
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -119,6 +146,56 @@
     text-align: center;
     text-decoration: none;
 }
+
+.ex-12-button:hover .ex-12-top-white {
+  animation: moverig 2s ;
+  animation-fill-mode: forwards;
+}
+  @keyframes moverig {
+    0% {
+      left: 0%;
+    }
+
+    100% {
+      left: calc(100% - 60px);
+    }
+
+  }
+
+.ex-12-button:hover .ex-12-bottom-white {
+  animation: moverig 2s linear;
+
+}
+  @keyframes moveleft {
+    0% {
+      left: 0%;
+    }
+
+    50% {
+      left: calc(100% - 60px);
+    }
+
+    100% {
+      left: 0%;
+    }
+
+}
+
+.ex-12-button:hover {
+  animation-name: slidein;
+  @keyframes slidein {
+  from {
+    margin-left:0%;
+
+  }
+
+  to {
+    margin-left:110%;
+
+  }
+}
+}
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
@@ -127,6 +204,9 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-13-button:hover
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
